@@ -1,0 +1,42 @@
+* {
+    // Reset all box sizing to border box
+    box-sizing: border-box;
+
+    // Reset all margin and padding values to zero
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // Set font size to be responsive to user choice on their web browser
+    // 62.5% = 10px = 1rem
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        font-size: 62.5%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        font-size: 50%;
+    }
+}
+
+body {
+    // Set font size to 16px
+    font-size: 1.4rem;
+    font-family: sans-serif;
+
+    // Create grid layout
+    display: grid;
+    grid-template-columns: 1fr repeat(6, minmax(10rem, 20rem)) 1fr;
+
+    background-color: rgba(238, 238, 238, 0.87);
+
+    @media only screen and (max-width: $bp-largest){
+        grid-template-columns: repeat(6, minmax(7rem, 20rem)) ;
+    }
+}

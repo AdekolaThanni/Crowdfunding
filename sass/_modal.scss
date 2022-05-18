@@ -1,0 +1,226 @@
+.modal-background{
+    background-color: rgba($black, .5);
+    height: 190rem;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+
+    z-index: 2000;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-medium){
+        height: 230rem;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        height: 260rem;
+    }
+}
+
+.modal {
+    width: 60%;
+    z-index: 20;
+    transform: translateY(20rem) scale(.5);
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+
+    @media only screen and (max-width: $bp-largest){
+        width: 80%;
+    }
+
+    &__close {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        right: 1.5rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &__box {
+        margin-top: 2rem;
+        border-radius: .5rem;
+        border: 1px solid $dark-gray;
+        padding: 2rem 1rem;
+        padding-left: 6rem;
+        position: relative;
+
+        @media only screen and (max-width: $bp-medium){
+            padding: 2rem 3rem;
+        }
+
+        & .heading-3 {
+            transition: all .2s;
+            cursor: default;
+         
+            &:hover {
+                color: $moderate-cyan;
+            }
+         }
+    }
+
+    &__radio {
+        cursor: pointer;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        top: 2.8rem;
+        left: 2rem;
+
+        @media only screen and (max-width: $bp-medium){
+            left: 1rem;
+        }
+    }
+
+}
+
+.arrange-head {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: fit-content;
+
+    @media only screen and (max-width: $bp-medium){
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-left: 2rem;
+                margin-bottom: 2rem;
+    }
+}
+
+#n1 .heading-3 {
+    margin-top: .8rem;
+
+    @media only screen and (max-width: $bp-medium){
+        margin-left: 2rem;
+    }
+}
+
+.avail-stands {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+
+    @media only screen and (max-width: $bp-medium){
+        position: unset;
+        margin: 2rem 0 0; 
+
+        & > .heading-2 {
+            font-size: 2rem;
+            margin-right: -0.5rem;
+        }
+    }
+}
+
+.expand-right{
+    margin-left: 2rem;
+    margin-right: auto;
+
+    @media only screen and (max-width: $bp-medium){
+        margin-left: 0;
+        margin-top: .5rem;
+    }
+}
+
+.expand-left {
+    margin:0 1rem;
+}
+
+.expand-top {
+    margin-bottom: 0;
+}
+
+.pledge-box {
+    border-top: 1px solid $dark-gray;
+    margin-left: -6rem;
+    margin-right: -1rem;
+    margin-top: 2rem;
+    display: none;
+    padding: 3rem 2rem 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium){
+        margin-left: -3rem;
+        margin-right: -3rem;
+    }
+
+    & .text {
+        transform: translateY(-.5rem);
+
+        @media only screen and (max-width: $bp-medium){
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+    
+    }
+
+    & .btn{
+        @media only screen and (max-width: $bp-medium){
+            align-self: flex-start;
+            height: 4rem;
+            width: 10rem;
+        }
+    }
+}
+
+.success {
+    // Grid span
+    align-self: flex-start;
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    z-index: 10;
+
+    background-color: #fff;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 4rem;
+    width: 50rem;
+
+    position: absolute;
+    top: 35rem;
+    left: 50%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translateX(-50%) scale(0.5);
+
+    @media only screen and (max-width: $bp-medium){
+        width: 40rem;
+    }
+
+    & > * {
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__button {
+        height: 3rem;
+        width: 7rem;
+    }
+}
